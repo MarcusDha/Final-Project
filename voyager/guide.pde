@@ -1,7 +1,0 @@
-void guide () {
-  
-}
-
-void guideClick () {
-  
-}
