@@ -6,5 +6,5 @@ void menu() {
 }
 
 void menuClick () {
-  
+  mode = game;
 }

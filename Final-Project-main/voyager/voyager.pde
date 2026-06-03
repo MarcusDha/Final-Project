@@ -6,7 +6,7 @@ final int items = 3;
 final int guide = 4;
 
 void setup() {
-  size (1600, 1000);
+  size (1024, 768);
   textAlign(CENTER, CENTER);
   imageMode(CENTER);
 }
