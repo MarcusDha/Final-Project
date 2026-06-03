@@ -14,4 +14,5 @@ void draw() {
     game();
   } else if (mode == menu) {
     menu();
+  }
 }
