@@ -1,0 +1,7 @@
+void guide () {
+  
+}
+
+void guideClick () {
+  
+}
