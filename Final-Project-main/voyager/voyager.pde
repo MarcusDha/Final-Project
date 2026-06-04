@@ -34,7 +34,8 @@ void setup() {
   spacebar = createFont("SPACEBAR.ttf",100);
   
   //btn(x, y, size, size when hovering, size, size when clicked)
-  b.add(new btn(width/2, height/2));
+  b.add(new btn(width/2-100, height/2+100));
+  b.add(new btn(width/2+100, height/2+100));
   
   //stars code
   for (int i = 0; i < 100; i++) {

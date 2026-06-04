@@ -1,15 +1,16 @@
 void menu() {
     background(0);
 
+    for (stars star : s){
+      star.move();
+      star.display();
+    }
+
     for (btn btn : b) {
       btn.move();
       btn.display();
     }
 
-    for (stars star : s){
-      star.move();
-      star.display();
-    }
 
   music.play();
   fill(255);
