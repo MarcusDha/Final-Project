@@ -1,18 +1,18 @@
 void menu() {
     background(0);
 
-    for (btn btn : b) {
-      btn.move();
-      btn.display();
-    }
-
     for (stars star : s){
       star.move();
       star.display();
     }
 
+    for (btn btn : b) {
+      btn.move();
+      btn.display();
+    }
+
+
   music.play();
-  background(0);
   fill(255);
   textFont(spacebar);
   textSize(64);
