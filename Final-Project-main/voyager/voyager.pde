@@ -1,3 +1,13 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+Minim minim;
+AudioPlayer music, ship, gas, click;
+
 ArrayList<btn> b = new ArrayList<btn>();
 ArrayList<stars> s = new ArrayList<stars>();
 int mode;
@@ -9,28 +19,34 @@ final int options = 2;
 final int items = 3;
 final int guide = 4;
 
+PFont spacebar;
 color white = #FFFFFF;
 color dGrey = #898484;
+color lGrey = #D1CFCF;
 
 void setup() {
   size (1024, 768);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
+  
+  //font setup
+  spacebar = createFont("SPACEBAR.ttf",100);
+  
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2, 200, 230, 200, 180));
+  
+  //stars code
   for (int i = 0; i < 100; i++) {
     s.add(new stars(random(width), random(height), 4));
   }
-
-  background(0);
-  for (int y = 0; y < height; y += random(1, 30)) {
-    for (int x = 0; x < width; x += random(1, 30)) {
-      circle(x, y, random(1, 3));
-    }
-    if (offset == 0) offset = 20;
-    else offset = 0;
-  }
+  
+  //minim
+  minim = new Minim(this);
+  music = minim.loadFile("the_mountain.mp3");
+  gas = minim.loadFile("water-splash.wav");
+  ship = minim.loadFile("space-ship.wav");
+  click = minim.loadFile("sci-fi-click.wav");
 }
 
 void draw() {
