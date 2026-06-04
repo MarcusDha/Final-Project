@@ -21,7 +21,7 @@ class btn {
   }
   
   void display() {
-    fill(0);
+    fill(255,0,0);
     stroke(255);
     strokeWeight(5);
     square(x,y,btX);
