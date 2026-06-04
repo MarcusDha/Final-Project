@@ -8,6 +8,8 @@ import ddf.minim.ugens.*;
 Minim minim;
 AudioPlayer music, ship, gas, click;
 
+ArrayList<btn> b = new ArrayList<btn>();
+ArrayList<stars> s = new ArrayList<stars>();
 int mode;
 int offset = 0;
 
@@ -25,19 +27,26 @@ color lGrey = #D1CFCF;
 void setup() {
   size (1024, 768);
   textAlign(CENTER, CENTER);
+  rectMode(CENTER);
   imageMode(CENTER);
-  mode = guide;
-
-  background(0);
   
+  //font setup
   spacebar = createFont("SPACEBAR.ttf",100);
   
+  //btn(x, y, size, size when hovering, size, size when clicked)
+  b.add(new btn(width/2, height/2, 200, 230, 200, 180));
+  
+  //stars code
+  for (int i = 0; i < 100; i++) {
+    s.add(new stars(random(width), random(height), 4));
+  }
+  
+  //minim
   minim = new Minim(this);
   music = minim.loadFile("the_mountain.mp3");
   gas = minim.loadFile("water-splash.wav");
   ship = minim.loadFile("space-ship.wav");
   click = minim.loadFile("sci-fi-click.wav");
-  
 }
 
 void draw() {
