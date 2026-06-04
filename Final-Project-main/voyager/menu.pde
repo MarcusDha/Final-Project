@@ -12,7 +12,6 @@ void menu() {
     }
 
   music.play();
-  background(0);
   fill(255);
   textFont(spacebar);
   textSize(64);
