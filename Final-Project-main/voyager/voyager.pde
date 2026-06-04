@@ -1,3 +1,5 @@
+ArrayList<btn> b = new ArrayList<btn>();
+ArrayList<stars> s = new ArrayList<stars>();
 int mode;
 int offset = 0;
 
@@ -13,7 +15,13 @@ color dGrey = #898484;
 void setup() {
   size (1024, 768);
   textAlign(CENTER, CENTER);
+  rectMode(CENTER);
   imageMode(CENTER);
+  //btn(x, y, size, size when hovering, size, size when clicked)
+  b.add(new btn(width/2, height/2, 200, 230, 200, 180));
+  for (int i = 0; i < 100; i++) {
+    s.add(new stars(random(width), random(height), 4));
+  }
 
   background(0);
   for (int y = 0; y < height; y += random(1, 30)) {

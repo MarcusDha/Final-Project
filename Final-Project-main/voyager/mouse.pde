@@ -1,7 +1,5 @@
 void mousePressed() {
-  if (mode == menu) {
-    menuClick();
-  } else if (mode == game) {
+  if (mode == game) {
     gameClick();
   } else if (mode == guide) {
     guideClick();
@@ -9,5 +7,13 @@ void mousePressed() {
     itemsClick();
   } else if (mode == options) {
     optionClick();
+  } else if (mode == menu) {
+    p =! p;
+  }
+}
+
+void mouseReleased() {
+  if (mode == menu) {
+    menuClick();
   }
 }
