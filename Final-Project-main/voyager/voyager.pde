@@ -1,3 +1,13 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+Minim minim;
+AudioPlayer music, ship, gas, click;
+
 int mode;
 int offset = 0;
 
@@ -7,6 +17,7 @@ final int options = 2;
 final int items = 3;
 final int guide = 4;
 
+PFont spacebar;
 color white = #FFFFFF;
 color dGrey = #898484;
 
@@ -23,6 +34,15 @@ void setup() {
     if (offset == 0) offset = 20;
     else offset = 0;
   }
+  
+  spacebar = createFont("SPACEBAR.ttf",100);
+  
+  minim = new Minim(this);
+  music = minim.loadFile("the_mountain.mp3");
+  gas = minim.loadFile("water-splash.wav");
+  ship = minim.loadFile("space-ship.wav");
+  click = minim.loadFile("sci-fi-click.wav");
+  
 }
 
 void draw() {
