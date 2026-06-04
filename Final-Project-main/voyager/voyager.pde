@@ -20,20 +20,15 @@ final int guide = 4;
 PFont spacebar;
 color white = #FFFFFF;
 color dGrey = #898484;
+color lGrey = #D1CFCF;
 
 void setup() {
   size (1024, 768);
   textAlign(CENTER, CENTER);
   imageMode(CENTER);
+  mode = guide;
 
   background(0);
-  for (int y = 0; y < height; y += random(1, 30)) {
-    for (int x = 0; x < width; x += random(1, 30)) {
-      circle(x, y, random(1, 3));
-    }
-    if (offset == 0) offset = 20;
-    else offset = 0;
-  }
   
   spacebar = createFont("SPACEBAR.ttf",100);
   
