@@ -52,6 +52,8 @@ void setup() {
 }
 
 void draw() {
+  println(mouseX,mouseY);
+  
   //mode framework
   if (mode == game) {
     game();
