@@ -1,9 +1,10 @@
 void game() {
   background(0);
-  circle(width/2, height /2, 10);
-  
+  for (stars star : s) {
+    star.move();
+    star.display();
+  }
 }
 
 void gameClick() {
-  
 }
