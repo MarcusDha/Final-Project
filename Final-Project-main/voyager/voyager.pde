@@ -40,7 +40,7 @@ void setup() {
   
   //stars code
   for (int i = 0; i < 750; i++) {
-    s.add(new stars(random(width), random(height), random(1,3)));
+    s.add(new stars(random(width), random(height), random(4)));
   }
   
   //minim
