@@ -39,8 +39,8 @@ void setup() {
   b.add(new btn(width/2 + width/4, height/2+200,50,options,"options"));
   
   //stars code
-  for (int i = 0; i < 100; i++) {
-    s.add(new stars(random(width), random(height), 4));
+  for (int i = 0; i < 750; i++) {
+    s.add(new stars(random(width), random(height), random(4)));
   }
   
   //minim

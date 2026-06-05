@@ -1,4 +1,9 @@
 void guide () {
+  background(0);
+  for (stars star : s){
+      star.move();
+      star.display();
+    }
   //grey box
   stroke(white);
   fill(lGrey);

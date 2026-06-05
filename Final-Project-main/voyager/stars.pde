@@ -2,7 +2,7 @@ class stars{
     float x;
     float y;
     float s;
-    
+    float c = random(0,255);
     stars(float x, float y, float s) {
         this.x = x;
         this.y = y;
@@ -10,7 +10,7 @@ class stars{
     }
     
     void display() {
-        fill(255);
+        fill(c);
         noStroke();
         circle(x, y, s);
     }
@@ -20,6 +20,7 @@ class stars{
         if (y > height) {
             y = -s;
             x = random(width);
+            c=random(0,255);
         }
     }
 }
