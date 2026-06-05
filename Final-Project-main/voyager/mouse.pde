@@ -7,9 +7,7 @@ void mousePressed() {
     itemsClick();
   } else if (mode == options) {
     optionClick();
-  } else if (mode == menu) {
-    p =! p;
-  }
+  } 
 }
 
 void mouseReleased() {
