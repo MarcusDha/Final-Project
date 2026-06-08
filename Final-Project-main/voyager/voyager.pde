@@ -5,12 +5,29 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+//audio variables
 Minim minim;
 AudioPlayer music, ship, gas, click;
 
+//arrays
 ArrayList<btn> b = new ArrayList<btn>();
 ArrayList<stars> s = new ArrayList<stars>();
+
+//mode variables
 int mode;
+final int menu = 0;
+final int game = 1;
+final int options = 2;
+final int items = 3;
+final int guide = 4;
+
+//font variables
+PFont spacebar;
+
+//color variables
+color white = #FFFFFF;
+color dGrey = #898484;
+color lGrey = #D1CFCF;
 
 //ship ints
 float shipX = width;
@@ -18,52 +35,18 @@ float shipY = height;
 float shipVX;
 float shipVY;
 
-
-final int menu = 0;
-final int game = 1;
-final int options = 2;
-final int items = 3;
-final int guide = 4;
-
-PFont spacebar;
-PImage spaceship;
-
-color white = #FFFFFF;
-color dGrey = #898484;
-color lGrey = #D1CFCF;
-
 void setup() {
   size (1024, 768);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
-  
-  //font setup
-  spacebar = createFont("SPACEBAR.ttf",100);
-  
   spaceship = loadImage("R.png");
-  
-  //btn(x, y, size, size when hovering, size, size when clicked)
-  b.add(new btn(width/2, height/2+200,50,game,"game"));
-  b.add(new btn(width/4, height/2+200,50,guide,"guide"));
-  b.add(new btn(width/2 + width/4, height/2+200,50,options,"options"));
-  
-  //stars code
-  for (int i = 0; i < 750; i++) {
-    s.add(new stars(random(width), random(height), random(4)));
-  }
-  
-  //minim
-  minim = new Minim(this);
-  music = minim.loadFile("the_mountain.mp3");
-  gas = minim.loadFile("water-splash.wav");
-  ship = minim.loadFile("space-ship.wav");
-  click = minim.loadFile("sci-fi-click.wav");
+  init();
 }
 
 void draw() {
-  println(mouseX,mouseY);
-  
+  println(mouseX, mouseY);
+
   //mode framework
   if (mode == game) {
     game();
@@ -71,8 +54,6 @@ void draw() {
     menu();
   } else if (mode == options) {
     options();
-  } else if (mode == items) {
-    items();
   } else if (mode == guide) {
     guide();
   }

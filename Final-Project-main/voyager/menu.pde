@@ -1,15 +1,17 @@
+float fade = 0;
+boolean p;
 void menu() {
-    background(0);
+  background(0);
 
-    for (stars star : s){
-      star.move();
-      star.display();
-    }
+  for (stars star : s) {
+    star.move();
+    star.display();
+  }
 
-    for (btn btn : b) {
-      btn.move();
-      btn.display();
-    }
+  for (btn btn : b) {
+    btn.move();
+    btn.display();
+  }
 
 
   music.play();
