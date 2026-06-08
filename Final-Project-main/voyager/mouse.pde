@@ -3,8 +3,6 @@ void mousePressed() {
     gameClick();
   } else if (mode == guide) {
     guideClick();
-  } else if (mode == items) {
-    itemsClick();
   } else if (mode == options) {
     optionClick();
   } 
