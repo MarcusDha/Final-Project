@@ -11,7 +11,13 @@ AudioPlayer music, ship, gas, click;
 ArrayList<btn> b = new ArrayList<btn>();
 ArrayList<stars> s = new ArrayList<stars>();
 int mode;
-int offset = 0;
+
+//ship ints
+float shipX = width;
+float shipY = height;
+float shipVX;
+float shipVY;
+
 
 final int menu = 0;
 final int game = 1;
@@ -20,6 +26,8 @@ final int items = 3;
 final int guide = 4;
 
 PFont spacebar;
+PImage spaceship;
+
 color white = #FFFFFF;
 color dGrey = #898484;
 color lGrey = #D1CFCF;
@@ -32,6 +40,8 @@ void setup() {
   
   //font setup
   spacebar = createFont("SPACEBAR.ttf",100);
+  
+  spaceship = loadImage("R.png");
   
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+200,50,game,"game"));
