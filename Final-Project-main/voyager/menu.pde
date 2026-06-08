@@ -19,9 +19,8 @@ void menu() {
   textFont(spacebar);
   textSize(64);
   text("VOYAGER QUEST", width / 2, height / 2 - 100);
-  fill(0, 0, 0, fade);
-  noStroke();
-  rect(width/2, height/2, width, height);
+  
+ 
 }
 
 void menuClick () {

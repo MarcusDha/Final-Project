@@ -29,11 +29,18 @@ color white = #FFFFFF;
 color dGrey = #898484;
 color lGrey = #D1CFCF;
 
+//ship ints
+float shipX = width;
+float shipY = height;
+float shipVX;
+float shipVY;
+
 void setup() {
   size (1024, 768);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
+  spaceship = loadImage("R.png");
   init();
 }
 
