@@ -8,6 +8,10 @@ void init() {
   b.add(new btn(width/2, height/2+200, 50, game, "game"));
   b.add(new btn(width/4, height/2+200, 50, guide, "guide"));
   b.add(new btn(width/2 + width/4, height/2+200, 50, options, "options"));
+  
+  for (int i = 0; i < 2; i++) {
+    pt.add(new planet(random(width), random(height), 100));
+  }
 
   //stars code
   for (int i = 0; i < 750; i++) {

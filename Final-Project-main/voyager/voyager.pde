@@ -12,6 +12,7 @@ AudioPlayer music, ship, gas, click;
 //arrays
 ArrayList<btn> b = new ArrayList<btn>();
 ArrayList<stars> s = new ArrayList<stars>();
+ArrayList<planet> pt = new ArrayList<planet>();
 
 //mode variables
 int mode;
@@ -29,7 +30,6 @@ PImage spaceship;
 color white = #FFFFFF;
 color dGrey = #898484;
 color lGrey = #D1CFCF;
-color orange = #F5B80F;
 
 //ship ints
 float shipX = width+400;
@@ -39,7 +39,6 @@ float shipVY;
 float fuel = 100;
 int fuelP;
 float rectX = 300;
-
 
 
 void setup() {
