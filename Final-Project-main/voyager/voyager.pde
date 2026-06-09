@@ -23,7 +23,6 @@ final int guide = 4;
 
 //font variables
 PFont spacebar;
-
 PImage spaceship;
 
 //color variables
@@ -42,7 +41,6 @@ void setup() {
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
-  spaceship = loadImage("R.png");
   init();
 }
 
