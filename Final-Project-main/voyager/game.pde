@@ -6,6 +6,8 @@ void game() {
   }
   
   ship(width/2,height/2,0);
+  
+  
 }
 
 void gameClick() {

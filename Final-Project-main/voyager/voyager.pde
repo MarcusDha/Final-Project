@@ -23,6 +23,7 @@ final int guide = 4;
 
 //font variables
 PFont spacebar;
+PImage spaceship;
 
 //color variables
 color white = #FFFFFF;
@@ -30,8 +31,8 @@ color dGrey = #898484;
 color lGrey = #D1CFCF;
 
 //ship ints
-float shipX = width;
-float shipY = height;
+float shipX = width+400;
+float shipY = height+300;
 float shipVX;
 float shipVY;
 
@@ -40,7 +41,6 @@ void setup() {
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
-  spaceship = loadImage("R.png");
   init();
 }
 
