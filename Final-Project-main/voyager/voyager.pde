@@ -12,6 +12,7 @@ AudioPlayer music, ship, gas, click;
 //arrays
 ArrayList<btn> b = new ArrayList<btn>();
 ArrayList<stars> s = new ArrayList<stars>();
+ArrayList<planet> pt = new ArrayList<planet>();
 
 //mode variables
 int mode;

@@ -7,8 +7,12 @@ void game() {
     star.display();
   }
   pop();
-  square(400, 300, 100);
   ship(width/2, height/2, 0);
+
+  for (planet pt : pt) {
+    pt.physics();
+    pt.display();
+  }
 }
 
 void gameClick() {
