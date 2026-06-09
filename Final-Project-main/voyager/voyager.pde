@@ -29,12 +29,18 @@ PImage spaceship;
 color white = #FFFFFF;
 color dGrey = #898484;
 color lGrey = #D1CFCF;
+color orange = #F5B80F;
 
 //ship ints
 float shipX = width+400;
 float shipY = height+300;
 float shipVX;
 float shipVY;
+float fuel = 100;
+int fuelP;
+float rectX = 300;
+
+
 
 void setup() {
   size (1024, 768);

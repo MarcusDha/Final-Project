@@ -7,8 +7,24 @@ void game() {
     star.display();
   }
   pop();
-  square(400, 300, 100);
   ship(width/2, height/2, 0);
+  
+  //Fuel bar
+  stroke(lGrey);
+  fill(0);
+  rect(width/4,height-60,310,75);
+  fill(orange);
+  noStroke();
+  rect(width/4,height-60,rectX,67.5);
+ 
+  
+  fuelP = round(fuel);
+  textFont(createFont("SansSerif",16));
+  fill(255);
+  textSize(80);
+  text(fuelP+ "%",width/4, height-60);
+  
+  rectX = map(fuel,0,100,0,300);
 }
 
 void gameClick() {
