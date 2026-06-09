@@ -20,4 +20,27 @@ void ship (int x, int y, float r) {
   if (akey && shipVX >= -3) shipVX -= 0.25;
   if (dkey && shipVX <=3) shipVX += 0.25;
   
+  if (wkey == false) {
+    if (shipVY < 0) { 
+      shipVY += 0.05;
+    }
+  }
+  
+  if (skey == false) {
+    if (shipVY > 0) {
+      shipVY -= 0.05;
+    }
+  }
+  
+  if (akey == false) {
+    if (shipVX < 0) {
+      shipVX += 0.05;
+    }
+  }
+  
+  if (dkey == false) {
+    if (shipVX > 0) {
+      shipVX -= 0.05;
+    }
+  }
 }
