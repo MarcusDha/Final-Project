@@ -2,7 +2,6 @@ void init() {
     
   //font setup
   spacebar = createFont("SPACEBAR.ttf", 100);
-  spaceship = loadImage("R.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+200, 50, game, "game"));
