@@ -35,6 +35,13 @@ color dGrey = #898484;
 color lGrey = #D1CFCF;
 color orange = #FAC40F;
 
+/*
+//ship ints
+float shipX, shipY, shipVX, shipVY, fuelP;
+float fuel = 100;
+float rectX = 300;
+*/
+
 //ship ints
 float shipX = width + 400;
 float shipY = height + 850;
@@ -47,7 +54,7 @@ float rectX = 300;
 
 
 void setup() {
-  size (1024, 1050);
+  size (1024, 768);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
