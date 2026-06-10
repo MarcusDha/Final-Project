@@ -4,10 +4,11 @@ void ship (int x, int y, float r) {
   strokeWeight(3);
   stroke(255);
   fill(0);
-  circle(shipX, shipY, 75);
+  circle(shipX, shipY, shipD);
+
 
   rotate(radians(r));
-  image(spaceship, shipX, shipY, 56.25, 84.375);
+  image(spaceship, shipX, shipY, 42.1875, 63.28125);
 
 
   shipX = shipX + shipVX;
@@ -15,20 +16,20 @@ void ship (int x, int y, float r) {
 
 
   if (fuel > 0) {
-    if (wkey && shipVY >= -2.5) shipVY -= 0.25;
-    if (skey && shipVY <= 2.5) shipVY += 0.25;
-    if (akey && shipVX >= -2.5) shipVX -= 0.25;
-    if (dkey && shipVX <=2.5) shipVX += 0.25;
-    
+    if (wkey && shipVY >= -2.5) shipVY -= 0.15;
+    if (skey && shipVY <= 2.5) shipVY += 0.15;
+    if (akey && shipVX >= -2.5) shipVX -= 0.15;
+    if (dkey && shipVX <=2.5) shipVX += 0.15;
+
     if (wkey) fuel -= 0.1;
     if (skey) fuel -= 0.1;
     if (akey) fuel -= 0.1;
     if (dkey) fuel -= 0.10;
-    
-    if (wkey == false) 
+
+    if (wkey == false)
       if (shipVY < 0) {
         shipVY += 0.05;
-    }
+      }
 
     if (skey == false) {
       if (shipVY > 0) {
@@ -47,8 +48,19 @@ void ship (int x, int y, float r) {
         shipVX -= 0.05;
       }
     }
+
+    if (spacekey == true) {
+      if (wkey && shipVY >= -4) shipVY -= 0.5;
+      if (skey && shipVY <= 4) shipVY += 0.5;
+      if (akey && shipVX >= -4) shipVX -= 0.5;
+      if (dkey && shipVX <= 4) shipVX += 0.5;
+
+      if (wkey) fuel -= 0.2;
+      if (skey) fuel -= 0.2;
+      if (akey) fuel -= 0.2;
+      if (dkey) fuel -= 0.2;
+    }
   }
   
-  //if (shipVX > 1 || shipVX < -1) fuel -= 1;
-  //if (shipVY > 1 || shipVY < -1) fuel -= 1;
+  
 }
