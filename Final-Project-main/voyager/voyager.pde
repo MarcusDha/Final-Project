@@ -24,17 +24,32 @@ final int guide = 4;
 
 //font variables
 PFont spacebar;
+
+//pictures
 PImage spaceship;
+PImage can;
 
 //color variables
 color white = #FFFFFF;
 color dGrey = #898484;
 color lGrey = #D1CFCF;
-color orange = #FF6B00;
+color orange = #FAC40F;
 
+/*
 //ship ints
 float shipX, shipY, shipVX, shipVY, fuelP;
 float fuel = 100;
+float rectX = 300;
+*/
+
+//ship ints
+float shipX = width + 400;
+float shipY = height + 850;
+int shipD = 75;
+float shipVX;
+float shipVY;
+float fuel = 100;
+int fuelP;
 float rectX = 300;
 
 

@@ -6,8 +6,8 @@ void ship (int x, int y, float r) {
   push();
   translate(shipX, shipY);
   rotate(radians(r));
-  circle(0, 0, 75);
-  image(spaceship, 0, 0, 56.25, 84.375);
+  circle(0, 0, shipD);
+  image(spaceship, 0, 0, 42.1875, 63.28125);
   pop();
 
 
@@ -42,8 +42,18 @@ void ship (int x, int y, float r) {
       }
     }
 
-  }
+    if (spacekey == true) {
+      if (wkey && shipVY >= -4) shipVY -= 0.5;
+      if (skey && shipVY <= 4) shipVY += 0.5;
+      if (akey && shipVX >= -4) shipVX -= 0.5;
+      if (dkey && shipVX <= 4) shipVX += 0.5;
 
-  //if (shipVX > 1 || shipVX < -1) fuel -= 1;
-  //if (shipVY > 1 || shipVY < -1) fuel -= 1;
+      if (wkey) fuel -= 0.2;
+      if (skey) fuel -= 0.2;
+      if (akey) fuel -= 0.2;
+      if (dkey) fuel -= 0.2;
+    }
+  }
+  
+  
 }

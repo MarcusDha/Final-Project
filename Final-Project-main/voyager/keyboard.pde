@@ -1,9 +1,10 @@
-boolean wkey, akey, skey, dkey;
+boolean wkey, akey, skey, dkey, spacekey;
 void keyPressed(){
   if (key == 'W' || key == 'w') wkey = true;
   if (key == 'A' || key == 'a') akey = true;
   if (key == 'S' || key == 's') skey = true;
   if (key == 'D' || key == 'd') dkey = true;
+  if (key == ' ') spacekey = true;
 }
 
 void keyReleased(){
@@ -11,4 +12,5 @@ void keyReleased(){
   if (key == 'A' || key == 'a') akey = false;
   if (key == 'S' || key == 's') skey = false;
   if (key == 'D' || key == 'd') dkey = false;
+  if (key == ' ') spacekey = false;
 }

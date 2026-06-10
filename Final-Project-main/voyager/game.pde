@@ -10,9 +10,17 @@ void game() {
   }
   
   pop();
-  push();
+  
+  if (gass == true) {
+    gas();
+    if (dist(shipX, shipY, gasX, gasY) <= shipD/2 + gasD/2) {
+      gas.play();
+      fuel = 100;
+      gass = false;
+    }
+  }
+  
   ship(width/2, height/2, rx);
-  pop();
 
   for (planet pt : pt) {
     pt.physics();
