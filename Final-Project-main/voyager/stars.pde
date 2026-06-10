@@ -17,9 +17,9 @@ class stars{
 
     void move() {
         y+=s/2;
-        if (y > height) {
-            y = -s;
-            x = random(width);
+        if (y > height*2) {
+            y = -height/3;
+            x = random(-width/2, width*1.5);
             c=random(0,255);
         }
     }

@@ -1,3 +1,4 @@
+float rx;
 void game() {
   background(0);
   push();
@@ -9,7 +10,9 @@ void game() {
   }
   
   pop();
-  ship(width/2, height/2, 0);
+  push();
+  ship(width/2, height/2, rx);
+  pop();
 
   for (planet pt : pt) {
     pt.physics();
@@ -17,6 +20,7 @@ void game() {
   }
   
   //Fuel bar
+  rectMode(CENTER);
   stroke(lGrey);
   fill(0);
   rect(width/4,height-60,310,75);
