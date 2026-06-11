@@ -4,6 +4,7 @@ void game() {
   push();
   translate(-shipX+width/2, -shipY+height/2);
   
+  
   for (stars star : s) {
     star.move();
     star.display();
@@ -26,24 +27,9 @@ void game() {
     pt.physics();
     pt.display();
   }
+   
+  fuelbar(); 
   
-  //Fuel bar
-  rectMode(CENTER);
-  stroke(lGrey);
-  fill(0);
-  rect(width/4,height-60,310,75);
-  fill(orange);
-  noStroke();
-  rect(width/4,height-60,rectX,67.5);
- 
-  
-  fuelP = round(fuel);
-  textFont(createFont("SansSerif",16));
-  fill(255);
-  textSize(80);
-  text(fuelP+ "%",width/4, height-60);
-  
-  rectX = map(fuel,0,100,0,300);
 }
 
 void gameClick() {

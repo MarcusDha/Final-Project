@@ -1,3 +1,5 @@
+
+
 void ship (int x, int y, float r) {
   //circle for collisions
   strokeWeight(3);
@@ -10,15 +12,14 @@ void ship (int x, int y, float r) {
   image(spaceship, 0, 0, 42.1875, 63.28125);
   pop();
 
-
   shipX = shipX + shipVX;
   shipY = shipY + shipVY;
 
 
   if (fuel > 0) {
     if (wkey) {
-      shipVX += cos(radians(rx))*0.1;
-      shipVY += sin(radians(rx))*0.1;
+      shipVX += cos(radians(rx))*0.05; // cos
+      shipVY += sin(radians(rx))*0.05; // sin
     }
     //if (skey && shipVY <= 2.5) shipVY += 0.25;
     if (akey) rx -= 1;
@@ -43,10 +44,10 @@ void ship (int x, int y, float r) {
     }
 
     if (spacekey == true) {
-      if (wkey && shipVY >= -4) shipVY -= 0.5;
-      if (skey && shipVY <= 4) shipVY += 0.5;
-      if (akey && shipVX >= -4) shipVX -= 0.5;
-      if (dkey && shipVX <= 4) shipVX += 0.5;
+      if (wkey && shipVY >= -4) shipVY -= 0.25;
+      if (skey && shipVY <= 4) shipVY += 0.25;
+      if (akey && shipVX >= -4) shipVX -= 0.25;
+      if (dkey && shipVX <= 4) shipVX += 0.25;
 
       if (wkey) fuel -= 0.2;
       if (skey) fuel -= 0.2;
@@ -54,6 +55,4 @@ void ship (int x, int y, float r) {
       if (dkey) fuel -= 0.2;
     }
   }
-  
-  
 }

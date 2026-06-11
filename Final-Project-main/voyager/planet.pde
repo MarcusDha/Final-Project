@@ -19,18 +19,18 @@ class planet {
     if (dist(shipX, shipY, x, y) < s+50/2) {
     }
     //close gravitational pull
-    if (dist(shipX, shipY, x, y) < s*2) {
+    if (dist(shipX, shipY, x, y) < s*1.5) {
       if (shipX>=x) {
-        shipVX-=0.1;
+        shipVX-=0.06;
       }
       if (shipX<=x) {
-        shipVX+=0.1;
+        shipVX+=0.06;
       }
       if (shipY>=y) {
-        shipVY-=0.1;
+        shipVY-=0.06;
       }
       if (shipY<=y) {
-        shipVY+=0.1;
+        shipVY+=0.06;
       }
     } 
   }
