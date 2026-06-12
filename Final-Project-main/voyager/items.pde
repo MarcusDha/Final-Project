@@ -5,6 +5,8 @@ class items{
         this.y = y;
         this.w = w;
         this.h = h;
+        
+      //void part(int x, int y, 
     }
 
     void collision() {

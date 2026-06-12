@@ -29,7 +29,6 @@ void game() {
   }
    
   fuelbar(); 
-  
 }
 
 void gameClick() {

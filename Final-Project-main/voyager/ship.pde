@@ -1,5 +1,3 @@
-
-
 void ship (int x, int y, float r) {
   //circle for collisions
   strokeWeight(3);
@@ -9,7 +7,7 @@ void ship (int x, int y, float r) {
   translate(shipX, shipY);
   rotate(radians(r));
   circle(0, 0, shipD);
-  image(spaceship, 0, 0, 42.1875, 63.28125);
+  image(spaceship, 0, 0, 63.28125, 42.1875);
   pop();
 
   shipX = shipX + shipVX;
