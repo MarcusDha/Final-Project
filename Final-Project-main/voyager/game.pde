@@ -3,12 +3,18 @@ void game() {
   background(0);
   push();
   translate(-shipX+width/2, -shipY+height/2);
-  
-  
+
+
   for (stars star : s) {
     star.move();
     star.display();
   }
+
+  for (planet pt : pt) {
+    pt.physics();
+    pt.display();
+  }
+
   
   pop();
   
@@ -22,11 +28,6 @@ void game() {
   }
   
   ship(width/2, height/2, rx);
-
-  for (planet pt : pt) {
-    pt.physics();
-    pt.display();
-  }
    
   fuelbar(); 
 }

@@ -23,6 +23,7 @@ final int game = 1;
 final int options = 2;
 final int items = 3;
 final int guide = 4;
+final int gameover = 5;
 final int map1 = 5;
 
 //font variables
@@ -40,7 +41,7 @@ color orange = #FAC40F;
 
 
 //ship ints
-float shipX, shipY, shipVX, shipVY;
+float shipX, shipY, shipVX, shipVY, accel;
 float fuel = 100;
 float rectX = 300;
 int shipD = 75;
@@ -67,6 +68,8 @@ void draw() {
     options();
   } else if (mode == guide) {
     guide();
+  } else if (mode == gameover) {
+    gameover();
   }
   
   if ( map == map1) {

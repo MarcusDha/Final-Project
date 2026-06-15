@@ -1,3 +1,5 @@
+
+
 void ship (int x, int y, float r) {
   //circle for collisions
   strokeWeight(3);
@@ -16,28 +18,28 @@ void ship (int x, int y, float r) {
 
   if (fuel > 0) {
     if (wkey) {
-      shipVX += cos(radians(rx))*0.05; // cos
-      shipVY += sin(radians(rx))*0.05; // sin
+      shipVX += cos(radians(rx))*0.05;
+      shipVY += sin(radians(rx))*0.05;
     }
     //if (skey && shipVY <= 2.5) shipVY += 0.25;
-    if (akey) rx -= 1;
-    if (dkey) rx += 1;
+    if (akey) rx -= 3;
+    if (dkey) rx += 3;
 
     if (wkey) fuel -= 0.1;
     if (skey) fuel -= 0.1;
 
     if (wkey == false) {
       if (shipVY < 0) {
-        shipVY += 0.05;
-      } 
+        shipVY += accel;
+      }
       if (shipVY > 0) {
-        shipVY -= 0.05;
-      } 
+        shipVY -= accel;
+      }
       if (shipVX < 0) {
-        shipVX +=0.05;
-      } 
+        shipVX += accel;
+      }
       if (shipVX > 0) {
-        shipVX -= 0.05;
+        shipVX -= accel;
       }
     }
 
