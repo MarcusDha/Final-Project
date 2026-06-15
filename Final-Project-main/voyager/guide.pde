@@ -4,9 +4,17 @@ void guide () {
       star.move();
       star.display();
     }
-  optionscreen();
+  guidescreen();
+  
+  for (btn btn : d) {
+    btn.move();
+    btn.display();
+  }
+  
 }
 
 void guideClick () {
-  
+  for (btn btn : d) {
+    btn.click();
+  }
 }

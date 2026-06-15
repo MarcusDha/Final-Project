@@ -6,13 +6,13 @@ void init() {
 
   //picture setup
   spaceship = loadImage("R.png");
-  can = loadImage("can.png");
+  can = loadImage("can-removebg-preview.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+200, 50, game, "game"));
   b.add(new btn(width/4, height/2+200, 50, guide, "guide"));
   b.add(new btn(width/2 + width/4, height/2+200, 50, options, "options"));
-  b.add(new btn(width/2 + width/4, height/2+200, 50, menu, "back"));
+  d.add(new btn(width/2, height/2+400, 50, menu, "continue"));
   
   //ship init
   accel=0.06;

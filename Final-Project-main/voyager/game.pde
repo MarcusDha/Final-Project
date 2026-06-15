@@ -15,6 +15,9 @@ void game() {
     pt.display();
   }
 
+  
+  pop();
+  
   if (gass == true) {
     gas();
     if (dist(shipX, shipY, gasX, gasY) <= shipD/2 + gasD/2) {
@@ -23,14 +26,10 @@ void game() {
       gass = false;
     }
   }
-
-  pop();
-
-
+  
   ship(width/2, height/2, rx);
-
-
-  fuelbar();
+   
+  fuelbar(); 
 }
 
 void gameClick() {

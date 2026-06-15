@@ -7,8 +7,9 @@ void gas () {
   fill(0);
   stroke(white);
   circle(gasX, gasY, gasD);
-  gascan(gasX, gasY);
+  image(can,gasX,gasY,75,75);
 }
+
 
 //gas can drawing
 void gascan (int x, int y) {

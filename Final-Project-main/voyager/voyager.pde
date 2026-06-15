@@ -17,13 +17,14 @@ ArrayList<planet> pt = new ArrayList<planet>();
 
 //mode variables
 int mode;
+int map;
 final int menu = 0;
 final int game = 1;
 final int options = 2;
 final int items = 3;
 final int guide = 4;
 final int gameover = 5;
-
+final int map1 = 5;
 
 //font variables
 PFont spacebar;
@@ -48,7 +49,7 @@ int fuelP;
 
 
 void setup() {
-  size (1024, 1050);
+  size (1024, 1025);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
@@ -69,5 +70,9 @@ void draw() {
     guide();
   } else if (mode == gameover) {
     gameover();
+  }
+  
+  if ( map == map1) {
+    map1();
   }
 }
