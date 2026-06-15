@@ -10,11 +10,11 @@ void guide () {
     btn.move();
     btn.display();
   }
-  
 }
 
 void guideClick () {
   for (btn btn : d) {
     btn.click();
   }
+  
 }

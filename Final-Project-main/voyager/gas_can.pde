@@ -11,12 +11,6 @@ void gas () {
 }
 
 
-//gas can drawing
-void gascan (int x, int y) {
-  fill(255, 0, 0);
-  rect(x, y, 32, 56);
-}
-
 void fuelbar () {
   rectMode(CENTER);
   stroke(lGrey);
