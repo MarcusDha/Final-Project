@@ -7,7 +7,7 @@ boolean item = true;
 void items() {
 }
 
-void itemC (int x, int y, String ss, File f) {
+void itemC (int x, int y, File f) {
   PImage pic = loadImage(f.getPath());
   circle(itemX, itemY, itemD);
   image(pic, itemX, itemY, itemD, itemD);

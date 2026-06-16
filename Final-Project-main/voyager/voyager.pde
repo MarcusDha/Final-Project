@@ -75,7 +75,7 @@ void draw() {
     parts();
   }
   
-  if ( map == map1) {
+  if (map == map1) {
     map1();
   }
 }
