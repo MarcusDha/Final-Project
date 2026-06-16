@@ -24,6 +24,8 @@ void game() {
   ship(width/2, height/2, rx);
    
   fuelbar(); 
+  
+  itemC(width/2, height/4, "can.png", "wow");
 }
 
 void gameClick() {

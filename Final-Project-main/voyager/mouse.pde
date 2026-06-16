@@ -9,6 +9,8 @@ void mousePressed() {
     partsClick();
   } else if (mode == gameover) {
     gameoverClick();
+  } else if (mode == pause) {
+    clickc();
   }
 
 }

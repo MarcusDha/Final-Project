@@ -18,7 +18,7 @@ class planet {
 
   void physics() {
     if (dist(shipX, shipY, tx, ty) < (s+shipD)/2) {
-      mode=gameover;
+      //mode=gameover;
     }
     //close gravitational pull
     if (dist(shipX, shipY, tx, ty) < s*1.5) {

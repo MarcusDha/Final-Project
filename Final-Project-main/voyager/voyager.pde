@@ -23,9 +23,10 @@ final int game = 1;
 final int options = 2;
 final int items = 3;
 final int guide = 4;
-final int parts = 5;
-final int gameover = 6;
-final int map1 = 7;
+final int pause = 5;
+final int parts = 6;
+final int gameover = 7;
+final int map1 = 8;
 
 //font variables
 PFont spacebar;
@@ -73,6 +74,8 @@ void draw() {
     gameover();
   } else if (mode == parts) {
     parts();
+  } else if (mode == pause) {
+    pauses();
   }
   
   if (map == map1) {
