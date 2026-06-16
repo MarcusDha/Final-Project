@@ -1,20 +1,16 @@
 int gasX = width+400;
 int gasY = height + 600;
 int gasD = 75;
+float tgasx, tgasy;
 boolean gass = true;
 
 void gas () {
+  tgasx = gasX-shipX+width/2;
+  tgasy = gasY-shipY+height/2;
   fill(0);
   stroke(white);
-  circle(gasX, gasY, gasD);
-  image(can,gasX,gasY,75,75);
-}
-
-
-//gas can drawing
-void gascan (int x, int y) {
-  fill(255, 0, 0);
-  rect(x, y, 32, 56);
+  circle(tgasx, tgasy, gasD);
+  image(can,tgasx,tgasy,75,75);
 }
 
 void fuelbar () {

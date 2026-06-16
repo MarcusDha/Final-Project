@@ -1,7 +1,5 @@
 class stars{
-    float x;
-    float y;
-    float s;
+    float x,y,s;
     float c = random(0,255);
     stars(float x, float y, float s) {
         this.x = x;
@@ -12,7 +10,10 @@ class stars{
     void display() {
         fill(c);
         noStroke();
+        push();
+        translate(-shipX+width/2, -shipY+height/2);
         circle(x, y, s);
+        pop();
     }
 
     void move() {

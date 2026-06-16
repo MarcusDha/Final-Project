@@ -1,9 +1,6 @@
 float rx;
 void game() {
   background(0);
-  push();
-  translate(-shipX+width/2, -shipY+height/2);
-
 
   for (stars star : s) {
     star.move();
@@ -14,13 +11,10 @@ void game() {
     pt.physics();
     pt.display();
   }
-
-  
-  pop();
   
   if (gass == true) {
     gas();
-    if (dist(shipX, shipY, gasX, gasY) <= shipD/2 + gasD/2) {
+    if (dist(shipX, shipY, tgasx, tgasy) <= shipD/2 + gasD/2) {
       gas.play();
       fuel = 100;
       gass = false;

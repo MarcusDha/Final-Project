@@ -28,6 +28,7 @@ void ship (int x, int y, float r) {
     if (wkey) fuel -= 0.1;
     if (skey) fuel -= 0.1;
 
+    /*
     if (wkey == false) {
       if (shipVY < 0) {
         shipVY += accel;
@@ -42,6 +43,7 @@ void ship (int x, int y, float r) {
         shipVX -= accel;
       }
     }
+      */
 
     if (spacekey == true) {
       if (wkey && shipVY >= -4) shipVY -= 0.25;
