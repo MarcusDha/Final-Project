@@ -5,7 +5,9 @@ void mousePressed() {
     guideClick();
   } else if (mode == options) {
     optionClick();
-  } 
+  } else if (mode == parts) {
+    partsClick();
+  }
 }
 
 void mouseReleased() {

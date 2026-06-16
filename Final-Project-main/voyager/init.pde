@@ -12,6 +12,7 @@ void init() {
   b.add(new btn(width/2, height/2+200, 50, game, "game"));
   b.add(new btn(width/4, height/2+200, 50, guide, "guide"));
   b.add(new btn(width/2 + width/4, height/2+200, 50, options, "options"));
+  b.add(new btn(width/4 + width/8, height/2 + 400, 50,parts, "items"));
   d.add(new btn(width/2, height/2+400, 50, menu, "continue"));
   
   //ship init

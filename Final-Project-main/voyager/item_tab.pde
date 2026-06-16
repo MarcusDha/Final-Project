@@ -1,0 +1,7 @@
+void parts () {
+  
+}
+
+void partsClick() {
+  
+}
