@@ -7,9 +7,12 @@ void mousePressed() {
     optionClick();
   } else if (mode == parts) {
     partsClick();
+  } else if (mode == gameover) {
+    gameoverClick();
   } else if (mode == pause) {
     clickc();
   }
+
 }
 
 void mouseReleased() {

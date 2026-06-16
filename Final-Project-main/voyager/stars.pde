@@ -11,7 +11,7 @@ class stars{
         fill(c);
         noStroke();
         push();
-        translate(-shipX+width/2, -shipY+height/2);
+        translate((-shipX*0.5)+width/2, (-shipY*0.5)+height/2);
         circle(x, y, s);
         pop();
     }
