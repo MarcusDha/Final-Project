@@ -31,7 +31,6 @@ void game() {
   
   map = map1;
   
-  }
 }
 
 void gameClick() {
