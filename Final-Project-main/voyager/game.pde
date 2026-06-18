@@ -25,7 +25,9 @@ void game() {
    
   fuelbar(); 
   
-  itemC(width/2, height/4, "can.png", "wow");
+  map = map1;
+  
+  }
 }
 
 void gameClick() {
