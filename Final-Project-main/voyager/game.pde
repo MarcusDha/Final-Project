@@ -1,7 +1,6 @@
 float rx;
 void game() {
   background(0);
-
   for (stars star : s) {
     star.move();
     star.display();
@@ -20,12 +19,15 @@ void game() {
       gass = false;
     }
   }
+
+  if (shipY<=-100 || shipY>=height+100 || shipX<=-100) {
+    out=true;
+  }
   
   ship(width/2, height/2, rx);
    
   fuelbar(); 
-  
-  itemC(width/2, height/4, "can.png", "wow");
+  reset();
 }
 
 void gameClick() {

@@ -23,10 +23,9 @@ final int game = 1;
 final int options = 2;
 final int items = 3;
 final int guide = 4;
-final int pause = 5;
-final int parts = 6;
-final int gameover = 7;
-final int map1 = 8;
+final int parts = 5;
+final int gameover = 6;
+final int map1 = 7;
 
 //font variables
 PFont spacebar;
@@ -42,16 +41,19 @@ color lGrey = #D1CFCF;
 color orange = #FAC40F;
 
 
-//ship ints
+//ship variables
 float shipX, shipY, shipVX, shipVY, accel;
 float fuel = 100;
 float rectX = 300;
 int shipD = 75;
 int fuelP;
 
+//resetting
+float rcount, rc;
+boolean out;
 
 void setup() {
-  size (1024, 1025);
+  size (1600, 800);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
@@ -59,7 +61,6 @@ void setup() {
 }
 
 void draw() {
-  println(mouseX, mouseY);
 
   //mode framework
   if (mode == game) {
@@ -74,8 +75,6 @@ void draw() {
     gameover();
   } else if (mode == parts) {
     parts();
-  } else if (mode == pause) {
-    pauses();
   }
   
   if (map == map1) {

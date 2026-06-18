@@ -5,6 +5,7 @@ class planet {
     this.x = x;
     this.y = y;
     this.s = s;
+    
   }
 
   void display() {
@@ -18,7 +19,7 @@ class planet {
 
   void physics() {
     if (dist(shipX, shipY, tx, ty) < (s+shipD)/2) {
-      //mode=gameover;
+      out=true;
     }
     //close gravitational pull
     if (dist(shipX, shipY, tx, ty) < s*1.5) {
