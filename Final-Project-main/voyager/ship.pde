@@ -8,7 +8,7 @@ void ship (float r) {
   push();
   translate(shipX, shipY);
   rotate(radians(r));
-  circle(0, 0, shipD);
+  //circle(0, 0, shipD);
   image(spaceship, 0, 0, 63.28125, 42.1875);
   pop();
 

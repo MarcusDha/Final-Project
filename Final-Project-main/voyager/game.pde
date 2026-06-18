@@ -1,6 +1,12 @@
 float rx;
 void game() {
   background(0);
+  
+  imageMode(CORNER);
+  background(0);
+  image(space,0,0,1600,800);
+  imageMode(CENTER);
+
   for (stars star : s) {
     star.move();
     star.display();
@@ -28,7 +34,8 @@ void game() {
 
   fuelbar();
   reset();
-
+  meteors();
+  
   map = map1;
 
   if ( shipX > width + 100) {

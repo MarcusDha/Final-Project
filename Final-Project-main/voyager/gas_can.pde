@@ -8,8 +8,6 @@ void gas () {
   tgasx = gasX-shipX+width/2;
   tgasy = gasY-shipY+height/2;
   fill(0);
-  stroke(white);
-  circle(tgasx, tgasy, gasD);
   image(can,tgasx,tgasy,75,75);
 }
 
@@ -24,10 +22,10 @@ void fuelbar () {
 
 
   fuelP = round(fuel);
-  textFont(createFont("SansSerif", 16));
+  textFont(createFont("SandSeriff", 80));
   fill(255);
   textSize(80);
-  text(fuelP+ "%", width/4, height-60);
+  text(fuelP+ "%", width/4, height-75);
 
   rectX = map(fuel, 0, 100, 0, 300);
 }

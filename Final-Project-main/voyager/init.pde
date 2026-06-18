@@ -10,13 +10,17 @@ void init() {
   antenna = loadImage("antenna.png");
   pl1 = loadImage("planet.png");
   pl2 = loadImage("neptune.png");
+  space = loadImage("background.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
-  b.add(new btn(width/2, height/2+200, 50, game, "game"));
-  b.add(new btn(width/4, height/2+200, 50, guide, "guide"));
-  b.add(new btn(width/2 + width/4, height/2+200, 50, options, "options"));
-  b.add(new btn(width/4 + width/8, height/2 + 400, 50, parts, "items"));
-  d.add(new btn(width/2, height/2+400, 50, menu, "continue"));
+  b.add(new btn(width/2, height/2+150, 50, game, "game"));
+  b.add(new btn(width/4, height/2+150, 50, guide, "guide"));
+  b.add(new btn(width/2 + width/4, height/2+150, 50, options, "options"));
+  b.add(new btn(width/4 + width/8, height/2 + 300, 50, parts, "items"));
+  b.add(new btn(width/2 + width/8, height/2 + 300, 50, story, "story"));
+  
+  d.add(new btn(width/2, height/2+300, 50, menu, "continue"));
+  d.add(new btn(width/2, height/2+300, 50, menu, "continue"));
 
   //ship init
   accel=0.06;
