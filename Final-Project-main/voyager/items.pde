@@ -1,5 +1,4 @@
-int itemX;
-int itemY;
+float itemX, itemY, tItemX, tItemY;
 String ss;
 float itemD = 75;
 boolean item = true;
@@ -9,12 +8,15 @@ void items() {
 
 void itemC (int itemX, int itemY, String ss, String sss) {
   PImage pic = loadImage(ss);
+  tItemX = itemX-shipX+width/2;
+  tItemY = itemY-shipY+height/2;
   if (item) {
-    image(pic, itemX, itemY, itemD, itemD);
+    circle(tItemX, tItemY, itemD);
+    image(pic, tItemX, tItemY, itemD, itemD);
   }
 
   if (item) {
-    if (dist(shipX, shipY, itemX, itemY) <= shipD/2 + itemD/2) {
+    if (dist(shipX, shipY, tItemX, tItemY) <= shipD/2 + itemD/2) {
       item = false;
       mode = pause;
       rectMode(CORNER);

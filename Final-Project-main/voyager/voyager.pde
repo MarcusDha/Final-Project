@@ -35,10 +35,8 @@ final int story = 22;
 PFont spacebar;
 
 //pictures
-PImage spaceship;
-PImage can;
-PImage antenna;
-PImage space;
+PImage spaceship, can, antenna, pl1, pl2, space;
+
 
 //color variables
 color white = #FFFFFF;

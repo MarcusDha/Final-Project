@@ -1,6 +1,5 @@
 void reset() {
   if (out) {
-    rx=rx;
     shipVX=0;
     shipVY=0;
     rcount+=1;

@@ -1,20 +1,24 @@
 class planet {
-  float x,y,s,tx,ty;
+  float x,y,s,tx,ty,pr,pvr;
 
-  planet(float x, float y, float s) {
+  planet(float x, float y, float s, float pvr) {
     this.x = x;
     this.y = y;
     this.s = s;
-    
+    this.pvr = pvr;
   }
 
   void display() {
+    pr+=pvr;
     fill(255);
     noStroke();
     tx=x-shipX+width/2;
     ty=y-shipY+height/2;
-    circle(tx, ty, s);
-
+    push();
+    translate(tx,ty);
+    rotate(radians(pr));
+    image(pl2,0, 0, s, s);
+    pop();
   }
 
   void physics() {
