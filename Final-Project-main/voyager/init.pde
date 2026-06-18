@@ -4,10 +4,12 @@ void init() {
   //font setup
   spacebar = createFont("SPACEBAR.ttf", 100);
 
-  //picture setup
+  //image setup
   spaceship = loadImage("R.png");
   can = loadImage("can-removebg-preview.png");
   antenna = loadImage("antenna.png");
+  pl1 = loadImage("planet.png");
+  pl2 = loadImage("neptune.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+200, 50, game, "game"));
@@ -22,8 +24,8 @@ void init() {
   shipY = height/2;
 
   //planet init
-  for (int i = 0; i < 2; i++) {
-    pt.add(new planet(random(width), random(height), random(100, 300)));
+  for (int i = 0; i < 3; i++) {
+    pt.add(new planet(random(width), random(height), random(100, 300), random(-1,1)));
   }
 
   //stars init

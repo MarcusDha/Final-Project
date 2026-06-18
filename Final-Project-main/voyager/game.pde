@@ -10,7 +10,7 @@ void game() {
     pt.physics();
     pt.display();
   }
-  
+
   if (gass == true) {
     gas();
     if (dist(shipX, shipY, tgasx, tgasy) <= shipD/2 + gasD/2) {
@@ -23,19 +23,19 @@ void game() {
   if (shipY<=-100 || shipY>=height+100 || shipX<=-100) {
     out=true;
   }
-  
-  ship(width/2, height/2, rx);
-   
-  fuelbar(); 
+
+  ship(rx);
+
+  fuelbar();
   reset();
-  
+
   map = map1;
-  
-  //if ( shipX > width + 50) {
-  //  shipX = 0 + 50;
-  //  map = map2;
-  //}
+
+  if ( shipX > width + 100) {
+    shipX = 0 + 50;
+    map = map1;
   }
+}
 
 void gameClick() {
 }

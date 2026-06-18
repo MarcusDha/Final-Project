@@ -32,9 +32,8 @@ final int gameover = 7;
 PFont spacebar;
 
 //pictures
-PImage spaceship;
-PImage can;
-PImage antenna;
+PImage spaceship, can, antenna, pl1, pl2;
+
 
 //color variables
 color white = #FFFFFF;
@@ -55,7 +54,7 @@ float rcount, rc;
 boolean out;
 
 void setup() {
-  size (1600, 800);
+  size (1600, 800,P2D);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);

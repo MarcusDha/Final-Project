@@ -1,6 +1,6 @@
 
 
-void ship (int x, int y, float r) {
+void ship (float r) {
   //circle for collisions
   strokeWeight(3);
   stroke(255);
