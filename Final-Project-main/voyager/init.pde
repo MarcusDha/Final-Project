@@ -7,6 +7,7 @@ void init() {
   //picture setup
   spaceship = loadImage("R.png");
   can = loadImage("can-removebg-preview.png");
+  antenna = loadImage("antenna.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+200, 50, game, "game"));

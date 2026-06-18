@@ -28,6 +28,10 @@ void game() {
    
   fuelbar(); 
   reset();
+  
+  map = map1;
+  
+  }
 }
 
 void gameClick() {

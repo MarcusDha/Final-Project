@@ -23,9 +23,10 @@ final int game = 1;
 final int options = 2;
 final int items = 3;
 final int guide = 4;
-final int parts = 5;
-final int gameover = 6;
-final int map1 = 7;
+final int pause = 5;
+final int parts = 6;
+final int gameover = 7;
+
 
 //font variables
 PFont spacebar;
@@ -33,6 +34,7 @@ PFont spacebar;
 //pictures
 PImage spaceship;
 PImage can;
+PImage antenna;
 
 //color variables
 color white = #FFFFFF;
@@ -76,8 +78,34 @@ void draw() {
   } else if (mode == parts) {
     parts();
   }
-  
+
   if (map == map1) {
     map1();
+  } else if (map == map2) {
+    map2();
+  } else if (map == map3) {
+    map3();
+  } else if (map == map4) {
+    map4();
+  } else if (map == map5) {
+    map5();
+  } else if (map == map6) {
+    map6();
+  } else if (map == map7) {
+    map7();
+  } else if (map == map8) {
+    map8();
+  } else if (map == map9) {
+    map9();
+  } else if (map == map10) {
+    map10();
+  } else if (map == map11) {
+    map11();
+  } else if (map == map12) {
+    map12();
+  } else if (map == map13) {
+    map13();
+  } else if (map == map14) {
+    map14();
   }
 }
