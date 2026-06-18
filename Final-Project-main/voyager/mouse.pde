@@ -11,6 +11,8 @@ void mousePressed() {
     gameoverClick();
   } else if (mode == pause) {
     clickc();
+  } else if (mode == story) {
+    storyClick();
   }
 }
 

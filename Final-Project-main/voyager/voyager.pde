@@ -1,3 +1,5 @@
+import processing.javafx.*;
+
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
@@ -26,6 +28,7 @@ final int guide = 4;
 final int pause = 5;
 final int parts = 6;
 final int gameover = 7;
+final int story = 22;
 
 
 //font variables
@@ -35,6 +38,7 @@ PFont spacebar;
 PImage spaceship;
 PImage can;
 PImage antenna;
+PImage space;
 
 //color variables
 color white = #FFFFFF;
@@ -55,7 +59,7 @@ float rcount, rc;
 boolean out;
 
 void setup() {
-  size (1600, 800);
+  size (1600, 800, FX2D);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   imageMode(CENTER);
@@ -77,6 +81,8 @@ void draw() {
     gameover();
   } else if (mode == parts) {
     parts();
+  } else if (mode == story) {
+    story();
   }
 
   if (map == map1) {

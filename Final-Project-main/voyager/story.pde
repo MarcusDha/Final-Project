@@ -1,4 +1,4 @@
-void guide () {
+void story () {
   background(0);
   
   imageMode(CORNER);
@@ -10,15 +10,14 @@ void guide () {
       star.move();
       star.display();
     }
-  guidescreen();
-  
-  for (btn btn : d) {
+    
+    for (btn btn : d) {
     btn.move();
     btn.display();
   }
 }
 
-void guideClick () {
+void storyClick () {
   for (btn btn : d) {
     btn.click();
   }

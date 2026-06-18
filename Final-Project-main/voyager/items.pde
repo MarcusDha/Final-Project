@@ -10,7 +10,6 @@ void items() {
 void itemC (int itemX, int itemY, String ss, String sss) {
   PImage pic = loadImage(ss);
   if (item) {
-    circle(itemX, itemY, itemD);
     image(pic, itemX, itemY, itemD, itemD);
   }
 
