@@ -36,17 +36,9 @@ void itemC (int itemX, int itemY, String ss, String sss) {
   }
 }
 
-
-void itemP () {
-  rectMode(CORNER);
-  fill(0,100);
-  rect(0,0,width,height);
-  
-  
-  rectMode(CENTER);
-  fill(lGrey);
-  stroke(white);
-  rect(width/2,height/2,200,200);
-  text(ss,width,height);
-  
+void clickc () {
+  if (mode == pause) {
+    mode = game;
+  }
 }
+ 
