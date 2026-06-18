@@ -31,7 +31,11 @@ void game() {
   
   map = map1;
   
-}
+  //if ( shipX > width + 50) {
+  //  shipX = 0 + 50;
+  //  map = map2;
+  //}
+  }
 
 void gameClick() {
 }

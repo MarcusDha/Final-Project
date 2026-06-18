@@ -21,41 +21,68 @@ void map1 () {
 }
 
 void map2() {
+  item = true;
   itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map3() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
+
 
 void map4() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
+
 void map5() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map6() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map7() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map8() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map9() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map10() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map11() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map12() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map13() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
 
 void map14() {
+  item = true;
+  itemC(width/2 + width/4, height/4, "can-removebg-preview.png", "wow");
 }
