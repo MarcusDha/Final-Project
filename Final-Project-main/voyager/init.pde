@@ -13,16 +13,17 @@ void init() {
   b.add(new btn(width/2, height/2+200, 50, game, "game"));
   b.add(new btn(width/4, height/2+200, 50, guide, "guide"));
   b.add(new btn(width/2 + width/4, height/2+200, 50, options, "options"));
-  b.add(new btn(width/4 + width/8, height/2 + 400, 50,parts, "items"));
+  b.add(new btn(width/4 + width/8, height/2 + 400, 50, parts, "items"));
   d.add(new btn(width/2, height/2+400, 50, menu, "continue"));
-  
+
   //ship init
   accel=0.06;
+  shipX = 50;
+  shipY = height/2;
 
   //planet init
   for (int i = 0; i < 2; i++) {
     pt.add(new planet(random(width), random(height), random(100, 300)));
-    
   }
 
   //stars init
@@ -36,9 +37,4 @@ void init() {
   gas = minim.loadFile("water-splash.wav");
   ship = minim.loadFile("space-ship.wav");
   click = minim.loadFile("sci-fi-click.wav");
-
-  shipX = width-(width/2);
-  shipY = height-(height/2);
-  
-  
 }
