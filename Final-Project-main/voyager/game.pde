@@ -1,10 +1,10 @@
 float rx;
 void game() {
   background(0);
-  
+
   imageMode(CORNER);
   background(0);
-  image(space,0,0,1600,800);
+  image(space, 0, 0, 1600, 800);
   imageMode(CENTER);
 
   for (stars star : s) {
@@ -35,13 +35,13 @@ void game() {
   fuelbar();
   reset();
   meteors();
+  map1();
 
-  if ( shipX > width + 100) {
-    item = true;
-    shipX = 0 + 50;
-    map += 1;
+  if (item == true) {
+    if ( shipX > width + 100) {
+      shipX = 0 + 50;
+    }
   }
 }
-
-void gameClick() {
-}
+  void gameClick() {
+  }

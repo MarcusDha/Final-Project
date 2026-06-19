@@ -35,7 +35,7 @@ final int story = 22;
 PFont spacebar;
 
 //pictures
-PImage spaceship, can, antenna, pl1, pl2, space;
+PImage spaceship, can, antenna, pl1, pl2, space, voyager;
 
 
 //color variables
@@ -65,6 +65,7 @@ void setup() {
 }
 
 void draw() {
+  println(mouseX,mouseY);
 
   //mode framework
   if (mode == game) {
