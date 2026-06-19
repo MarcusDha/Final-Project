@@ -3,7 +3,12 @@ String ss;
 float itemD = 75;
 boolean item = true;
 
-void items() {
+void turnOn() {
+  if (item == false) {
+    if ( shipX > width + 100) {
+      item = true;
+    }
+  }
 }
 
 void itemC (int itemX, int itemY, String ss, String sss) {
@@ -33,6 +38,8 @@ void itemC (int itemX, int itemY, String ss, String sss) {
       fill(255, 0, 0);
       text(sss, width/2, height/2-50);
       text("Read in ITEMS for more info", width/2, height/2 + 50);
+      
+      //turnOn();
     }
   }
 }
@@ -42,4 +49,3 @@ void clickc () {
     mode = game;
   }
 }
- 
