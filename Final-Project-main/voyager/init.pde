@@ -11,6 +11,7 @@ void init() {
   pl1 = loadImage("planet.png");
   pl2 = loadImage("neptune.png");
   space = loadImage("background.png");
+  voyager = loadImage("voyager.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+150, 50, game, "game"));

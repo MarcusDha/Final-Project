@@ -29,13 +29,14 @@ final int pause = 5;
 final int parts = 6;
 final int gameover = 7;
 final int story = 22;
+final int pause1 = 23;
 
 
 //font variables
 PFont spacebar;
 
 //pictures
-PImage spaceship, can, antenna, pl1, pl2, space;
+PImage spaceship, can, antenna, pl1, pl2, space, voyager;
 
 
 //color variables
@@ -67,6 +68,7 @@ void setup() {
 }
 
 void draw() {
+  println(mouseX,mouseY);
 
   //mode framework
   if (mode == game) {
@@ -83,7 +85,10 @@ void draw() {
     parts();
   } else if (mode == story) {
     story();
+  } else if (mode == pause1) {
+    pause1();
   }
+    
 
   if (map == map1) {
     map1();
