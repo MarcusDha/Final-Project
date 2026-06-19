@@ -29,6 +29,7 @@ final int pause = 5;
 final int parts = 6;
 final int gameover = 7;
 final int story = 22;
+final int pause1 = 23;
 
 
 //font variables
@@ -82,7 +83,10 @@ void draw() {
     parts();
   } else if (mode == story) {
     story();
+  } else if (mode == pause1) {
+    pause1();
   }
+    
 
   if (map == map1) {
     map1();
