@@ -19,7 +19,7 @@ ArrayList<planet> pt = new ArrayList<planet>();
 
 //mode variables
 int mode;
-int map;
+int map = 8;
 final int menu = 0;
 final int game = 1;
 final int options = 2;
@@ -44,6 +44,8 @@ color dGrey = #898484;
 color lGrey = #D1CFCF;
 color orange = #FAC40F;
 
+//planet
+float[] rw,rh,rs;
 
 //ship variables
 float shipX, shipY, shipVX, shipVY, accel;
@@ -54,7 +56,7 @@ int fuelP;
 
 //resetting
 float rcount, rc;
-boolean out;
+boolean out, cleared;
 
 void setup() {
   size (1600, 800, FX2D);
@@ -85,31 +87,32 @@ void draw() {
 
   if (map == map1) {
     map1();
-  } else if (map == map2) {
-    map2();
-  } else if (map == map3) {
-    map3();
-  } else if (map == map4) {
-    map4();
-  } else if (map == map5) {
-    map5();
-  } else if (map == map6) {
-    map6();
-  } else if (map == map7) {
-    map7();
-  } else if (map == map8) {
-    map8();
-  } else if (map == map9) {
-    map9();
-  } else if (map == map10) {
-    map10();
-  } else if (map == map11) {
-    map11();
-  } else if (map == map12) {
-    map12();
-  } else if (map == map13) {
-    map13();
-  } else if (map == map14) {
-    map14();
+    //} else if (map == map2) {
+    //  map2();
+    //} else if (map == map3) {
+    //  map3();
+    //} else if (map == map4) {
+    //  map4();
+    //} else if (map == map5) {
+    //  map5();
+    //} else if (map == map6) {
+    //  map6();
+    //} else if (map == map7) {
+    //  map7();
+    //} else if (map == map8) {
+    //  map8();
+    //} else if (map == map9) {
+    //  map9();
+    //} else if (map == map10) {
+    //  map10();
+    //} else if (map == map11) {
+    //  map11();
+    //} else if (map == map12) {
+    //  map12();
+    //} else if (map == map13) {
+    //  map13();
+    //} else if (map == map14) {
+    //  map14();
+    //}
   }
 }

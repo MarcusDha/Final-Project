@@ -34,13 +34,15 @@ void game() {
 
   fuelbar();
   reset();
+  newlevel();
   meteors();
-  
-  map = map1;
 
   if ( shipX > width + 100) {
-    shipX = 0 + 50;
-    map = map1;
+    cleared=true;
+
+    item = true;
+
+    map += 1;
   }
 }
 
