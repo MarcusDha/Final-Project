@@ -1,7 +1,8 @@
 void pause1() {
-  
 }
 
 void pause1Click () {
-  mode = parts;
+  if (parts2 == true) {
+    mode = parts;
+  }
 }
