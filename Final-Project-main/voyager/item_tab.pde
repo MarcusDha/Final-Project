@@ -21,8 +21,10 @@ void parts () {
   image(voyager, width/2, height/2, 969, 678);
   fill(255,0,0);
   textSize(30);
-  text("CLICK ON", width/2 - 300, height/2 - 280);
-  text("A TEXT", width/2 - 300, height/2 - 240);
+  text("CLICK ON", width/2 - 350, height/2 - 280);
+  text("A TEXT", width/2 - 350, height/2 - 240);
+  textSize(25);
+  text("ADDITIONAL INFO", width/2 + 300 ,height/2 + 300);
 
 
   for (btn btn : d) {
@@ -142,7 +144,12 @@ void partsClick() {
       text(" planetary magnetic fields", width/2, height/2 + 50);
       text(" and magnetospheres", width/2, height/2 + 200);
     }
-
+    
+    if (mouseX > 934 && mouseX < 1261 && mouseY > 685 && mouseY < 716) {
+      screen("Attitude and articulation control subsystem", "controls the spacecraft’s orientation in space,", "keeps the high-gain antenna pointed toward Earth", "helps change voyagers orientation and direction", "Correctly positions the scanning platform");
+      text("ensuring Voyager is pointed correctly", width/2, height/2 - 100);
+  }  
+      
   if (arrow == true) {
     if (mouseX > width/2-50 && mouseX < width/2 + 50 && mouseY > height/2 + 200 && mouseY < height/2 + 300) {
       circle(0, 0, 1000);

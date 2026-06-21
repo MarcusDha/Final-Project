@@ -20,8 +20,8 @@ void init() {
   b.add(new btn(width/4 + width/8, height/2 + 300, 50, parts, "items"));
   b.add(new btn(width/2 + width/8, height/2 + 300, 50, story, "story"));
   
-  d.add(new btn(width/2, height/2+300, 50, menu, "continue"));
-  d.add(new btn(width/2, height/2+300, 50, menu, "continue"));
+  d.add(new btn(width/2, height/2+350, 50, menu, "continue"));
+  d.add(new btn(width/2, height/2+350, 50, menu, "continue"));
 
   //ship init
   accel=0.06;
