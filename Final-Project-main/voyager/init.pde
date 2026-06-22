@@ -11,6 +11,7 @@ void init() {
   pl1 = loadImage("planet.png");
   pl2 = loadImage("neptune.png");
   space = loadImage("background.png");
+  voyager = loadImage("voyager.png");
 
   //btn(x, y, size, size when hovering, size, size when clicked)
   b.add(new btn(width/2, height/2+150, 50, game, "game"));
@@ -27,6 +28,7 @@ void init() {
   shipX = 50;
   shipY = height/2;
 
+  //planet init
   plinit(4);
 
   //stars init
@@ -43,6 +45,7 @@ void init() {
 }
 
 void plinit(int n) {
+  //planet init;
   rw=new float[n];
   rh=new float[n];
   rs=new float[n];
@@ -52,66 +55,21 @@ void plinit(int n) {
     rh[i]=random(height);
     rs[i]=random(100, 300);
 
-    //planet distance spaghetti
-
-    //planet-planet
-    if (dist(rw[0], rh[0], rw[1], rh[1])<=(rs[0]+rs[1])/2) {
-      rw[0]-=rs[0]+rs[1];
+    boolean overlap = false;
+    for (int j = 0; j < i; j++) {
+      if (dist(rw[i], rh[i], rw[j], rh[j]) <= (rs[i] + rs[j])/2) {
+        overlap = true;
+        break;
+      }
     }
-    if (dist(rw[0], rh[0], rw[3], rh[3])<=(rs[3]+rs[0])/2) {
-      rw[0]-=rs[3]+rs[0];
-    }
-    if (dist(rw[2], rh[2], rw[0], rh[0])<=(rs[2]+rs[0])/2) {
-      rw[2]-=rs[2]+rs[0];
-    }
-    if (dist(rw[1], rh[1], rw[2], rh[2])<=(rs[1]+rs[2])/2) {
-      rw[1]+=rs[1]+rs[2];
-    }
-    if (dist(rw[1], rh[1], rw[3], rh[3])<=(rs[1]+rs[3])/2) {
-      rw[1]+=rs[1]+rs[3];
-    }
-    if (dist(rw[3], rh[3], rw[2], rh[2])<=(rs[3]+rs[2])/2) {
-      rw[3]+=rs[3]+rs[2];
+    if (overlap) {
+      rw[i]=random(width);
+      rh[i]=random(height);
     }
 
-    //planet-item
-    if (dist(rw[0], rh[0], width/2+width/4, height/2)<=(rs[0]+rs[1])/2) {
-      rw[0]-=random(300, 400);
-    }
-    if (dist(rw[0], rh[0], width/2+width/4, height/2)<=(rs[3]+rs[0])/2) {
-      rw[0]-=random(300, 400);
-    }
-    if (dist(rw[2], rh[2], width/2+width/4, height/2)<=(rs[2]+rs[0])/2) {
-      rw[2]-=random(300, 400);
-    }
-    if (dist(rw[1], rh[1], width/2+width/4, height/2)<=(rs[1]+rs[2])/2) {
-      rw[1]-=random(300, 400);
-    }
-    if (dist(rw[1], rh[1], width/2+width/4, height/2)<=(rs[1]+rs[3])/2) {
-      rw[1]-=random(300, 400);
-    }
-    if (dist(rw[3], rh[3], width/2+width/4, height/2)<=(rs[3]+rs[2])/2) {
-      rw[3]-=random(300, 400);
-    }
-
-    //planet-fuel
-    if (dist(rw[0], rh[0], width+400, height+600)<=(rs[0]+rs[1])/2) {
-      rw[0]-=random(300, 400);
-    }
-    if (dist(rw[0], rh[0], width+400, height+600)<=(rs[3]+rs[0])/2) {
-      rw[0]-=random(300, 400);
-    }
-    if (dist(rw[2], rh[2], width+400, height+600)<=(rs[2]+rs[0])/2) {
-      rw[2]-=random(300, 400);
-    }
-    if (dist(rw[1], rh[1], width+400, height+600)<=(rs[1]+rs[2])/2) {
-      rw[1]-=random(300, 400);
-    }
-    if (dist(rw[1], rh[1], width+400, height+600)<=(rs[1]+rs[3])/2) {
-      rw[1]-=random(300, 400);
-    }
-    if (dist(rw[3], rh[3], width+400, height+600)<=(rs[3]+rs[2])/2) {
-      rw[3]-=random(300, 400);
+    if (dist(rw[i],rh[i],gasX,gasY)<=(gasD+rs[i])/2){
+      rw[i]=random(width);
+      rh[i]=random(height);
     }
 
     pt.add(new planet(rw[i], rh[i], rs[i], random(-1, 1)));

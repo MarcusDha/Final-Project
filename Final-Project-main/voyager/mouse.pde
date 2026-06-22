@@ -13,6 +13,8 @@ void mousePressed() {
     clickc();
   } else if (mode == story) {
     storyClick();
+  } else if (mode == pause1) {
+    pause1Click();
   }
 }
 
