@@ -57,9 +57,12 @@ int arrowX = width+ 700;
 int arrowY = height/2 + 600;
 int arrowD = 50;
 
+//planet
+float[] rw,rh,rs;
+
 //resetting
 float rcount, rc;
-boolean out;
+boolean out,cleared;
 
 void setup() {
   size (1600, 800, FX2D);

@@ -29,9 +29,7 @@ void init() {
   shipY = height/2;
 
   //planet init
-  for (int i = 0; i < 3; i++) {
-    pt.add(new planet(random(width), random(height), random(100, 300), random(-1,1)));
-  }
+  plinit(4);
 
   //stars init
   for (int i = 0; i < 750; i++) {
@@ -44,4 +42,36 @@ void init() {
   gas = minim.loadFile("water-splash.wav");
   ship = minim.loadFile("space-ship.wav");
   click = minim.loadFile("sci-fi-click.wav");
+}
+
+void plinit(int n) {
+  //planet init;
+  rw=new float[n];
+  rh=new float[n];
+  rs=new float[n];
+  for (int i = 0; i < n; i++) {
+
+    rw[i]=random(width);
+    rh[i]=random(height);
+    rs[i]=random(100, 300);
+
+    boolean overlap = false;
+    for (int j = 0; j < i; j++) {
+      if (dist(rw[i], rh[i], rw[j], rh[j]) <= (rs[i] + rs[j])/2) {
+        overlap = true;
+        break;
+      }
+    }
+    if (overlap) {
+      rw[i]=random(width);
+      rh[i]=random(height);
+    }
+
+    if (dist(rw[i],rh[i],gasX,gasY)<=(gasD+rs[i])/2){
+      rw[i]=random(width);
+      rh[i]=random(height);
+    }
+
+    pt.add(new planet(rw[i], rh[i], rs[i], random(-1, 1)));
+  }
 }

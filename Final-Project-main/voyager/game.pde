@@ -33,14 +33,13 @@ void game() {
   ship(rx);
 
   fuelbar();
-  reset();
   meteors();
   map1();
+  reset();
+  newlevel();
 
-  if (item == true) {
-    if ( shipX > width + 100) {
-      shipX = 0 + 50;
-    }
+  if (item == true && shipX > width + 100) {
+      out=true;
   }
 }
   void gameClick() {

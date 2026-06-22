@@ -7,8 +7,8 @@ void turnOn() {
   if (item) {
   } else if (item == false) {
     if ( shipX > width + 100) {
-      item = true;
-      shipX = 0 + 50;
+      cleared=true;
+      item=true;
       map += 1;
     }
   }
