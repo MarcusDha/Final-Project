@@ -1,7 +1,3 @@
-void pause1() {
+void pauses() {
   
-}
-
-void pause1Click () {
-  mode = parts;
 }
