@@ -29,14 +29,13 @@ final int pause = 5;
 final int parts = 6;
 final int gameover = 7;
 final int story = 22;
-final int pause1 = 23;
 
 
 //font variables
 PFont spacebar;
 
 //pictures
-PImage spaceship, can, antenna, pl1, pl2, space, voyager;
+PImage spaceship, can, antenna, pl1, pl2, space;
 
 
 //color variables
@@ -45,6 +44,8 @@ color dGrey = #898484;
 color lGrey = #D1CFCF;
 color orange = #FAC40F;
 
+//planet
+float[] rw,rh,rs;
 
 //ship variables
 float shipX, shipY, shipVX, shipVY, accel;
@@ -59,7 +60,7 @@ int arrowD = 50;
 
 //resetting
 float rcount, rc;
-boolean out;
+boolean out, cleared;
 
 void setup() {
   size (1600, 800, FX2D);
@@ -70,7 +71,6 @@ void setup() {
 }
 
 void draw() {
-  println(mouseX,mouseY);
 
   //mode framework
   if (mode == game) {
@@ -87,10 +87,7 @@ void draw() {
     parts();
   } else if (mode == story) {
     story();
-  } else if (mode == pause1) {
-    pause1();
   }
-    
 
   if (map == map1) {
     map1();
