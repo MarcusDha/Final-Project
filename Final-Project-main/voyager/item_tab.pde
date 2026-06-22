@@ -118,12 +118,12 @@ void partsClick() {
     }
 
   if ( mouseX > 1003 && mouseX < 1182 && mouseY > 552 && mouseY < 588) { // optical calibration
-    screen("optical calibration target", "Flat rectangle of known color and brightness", "helps other instruments point towards targets", " ", " ");
+    screen("optical calibration target", "Flat rectangle of known color and brightness", "helps other instruments point towards targets", " ", "");
     text("for calibration purposes", width/2, height/2 + 50);
   }
 
   if (mouseX > 885 && mouseX < 1125 && mouseY > 634 && mouseY < 650) { // bus
-    screen("bus housing electronics", "Basic structure is a ten-sided box called the box", "Centerline of bus, called Z-axis, always points ", "Each side has compartments that holds", "rolls around z axis by firing small thrusters");
+    screen("bus housing electronics", "Basic structure is a ten-sided box called the box", "Centerline of bus, called Z-axis, always points ", "Each side has compartments that holds", "");
     text("to earth", width/2, height/2 + 50);
     text("different electronic instruments", width/2, height/2 + 200);
   }
