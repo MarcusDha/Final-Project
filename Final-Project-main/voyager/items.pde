@@ -8,8 +8,6 @@ void turnOn() {
   } else if (item == false) {
     if ( shipX > width + 100) {
       cleared=true;
-      item=true;
-      map += 1;
     }
   }
 }
@@ -26,6 +24,7 @@ void itemC (int itemX, int itemY, String ss, String sss) {
     if (dist(shipX, shipY, tItemX, tItemY) <= shipD/2 + itemD/2) {
       item = false;
       mode = pause;
+      map += 1;
       rectMode(CORNER);
       fill(0, 100);
       rect(0, 0, width, height);

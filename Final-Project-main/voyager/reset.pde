@@ -61,8 +61,10 @@ void newlevel() {
       shipVY=0;
       pt.clear();
       plinit(4);
+      item = true;
     }
     if (rcount==100) {
+      item=true;
       cleared=false;
       rcount=0;
     }

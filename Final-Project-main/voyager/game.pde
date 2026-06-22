@@ -35,8 +35,8 @@ void game() {
   fuelbar();
   meteors();
   map1();
-  reset();
   newlevel();
+  reset();
 
   if (item == true && shipX > width + 100) {
       out=true;
