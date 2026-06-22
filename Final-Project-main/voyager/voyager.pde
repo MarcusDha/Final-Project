@@ -54,6 +54,10 @@ float rectX = 300;
 int shipD = 75;
 int fuelP;
 
+int arrowX = width+ 700;
+int arrowY = height/2 + 600;
+int arrowD = 50;
+
 //resetting
 float rcount, rc;
 boolean out, cleared;

@@ -57,3 +57,9 @@ void optionscreen () {
   line(width-160, height-255, width-118, height-255);
   line(width-160, height-255, width-160, height-214);
 }
+
+void storyscreen () {
+    stroke(white);
+  fill(lGrey);
+  rect(width/2, height/2, 1200, 750);
+}
